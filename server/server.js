@@ -23,6 +23,13 @@ import messageRoute from "./routes/message.route.js";
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/message", messageRoute);
 
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
+
 // middlwares
 import { errorMiddleware } from "./middlewares/error.middlware.js";
 app.use(errorMiddleware);
