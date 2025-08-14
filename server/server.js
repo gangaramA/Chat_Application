@@ -8,7 +8,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL],
+    origin: [process.env.CLIENT_URL,"https://full-stack-chat-application-mern.netlify.app"],
     credentials: true,
   })
 );
